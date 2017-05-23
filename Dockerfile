@@ -1,10 +1,10 @@
-# Use Ubuntu 17.04 as the base package
-FROM ubuntu:17.04
+# Use Ubuntu 17.10 as the base package
+FROM ubuntu:16.10
 
 # Update and upgrade the distro. Primary reason is to get the apt-add-repository functionality
 RUN apt-get update \
     && apt-get upgrade -y \
-    && apt-get install -y software-properties-common python-software-properties vim ssh \
+    && apt-get install -y software-properties-common python-software-properties python-apt vim ssh \
     && apt-add-repository -y ppa:ansible/ansible \
     && apt-get update \
     && apt-get install -y ansible 

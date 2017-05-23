@@ -1,0 +1,6 @@
+---
+- hosts: local
+  tasks: 
+    - name: Install NTP
+      apt: pkg=ntp state=installed update_cache=true
+
